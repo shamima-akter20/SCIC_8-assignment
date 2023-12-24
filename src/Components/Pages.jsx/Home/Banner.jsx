@@ -12,16 +12,16 @@ const Banner = () => {
       >
         <div className="hero-overlay bg-opacity-80  bg-gradient-to-r from-[#293333] to-[rgba(21, 21, 21, 0)] "></div>
         <div className="hero-content text-start text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">
+          <div className="max-w-md p-7 md:p-0">
+            <h1 className="mb-2 md:mb-5 text-base md:text-5xl font-bold">Hello there</h1>
+            <p className="mb-2 text-xs md:text-base md:mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
 
           <Link to='/dashboard'>
-            <button className="btn btn-outline text-white">Explore
+            <button className="btn btn-sm md:btn-md btn-outline text-white">Explore
             <i className="fa-solid fa-arrow-right"></i>
             </button>
           </Link>

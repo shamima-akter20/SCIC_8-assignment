@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const Navbar = () => {
   const navLink = (
     <>
-      <div className="flex lg:flex-row flex-col lg:py-0 gap-6 text-lg font-bold list-none ">
+      <div className="flex lg:flex-row flex-col lg:py-0 gap-6 text-sm md:text-lg font-bold list-none ">
         <Link className="hover:text-gray-500" to='/'>Home</Link>
         <Link className="hover:text-gray-500" to='/login'>Log in</Link>
         <Link className="hover:text-gray-500" to='/dashboard'>Dashboard</Link>
