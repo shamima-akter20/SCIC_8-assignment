@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import login from './login.json';
 
 const Register = () => {
+
+   
   return (
     <div className="mx-2  md:mx-8 lg:mx-16">
 
@@ -21,7 +23,7 @@ const Register = () => {
           {/* ------------------------------------ */}
           {/*                  Form                */}
           {/* ------------------------------------ */}
-          <form className="card-body">
+          <form  >
             {/* -----------------------------  Name  --------------------------- */}
             <div className="form-control ">
               <label className="label">
