@@ -1,5 +1,6 @@
 // Dashboard.js
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { Helmet } from 'react-helmet-async';
 import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 
@@ -13,6 +14,9 @@ const Dashboard = () => {
 
   return (
     <div>
+        <Helmet>
+            <title>Dashboard | SCC Technovision Inc.</title>
+        </Helmet>
       <TaskForm />
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="to-do">

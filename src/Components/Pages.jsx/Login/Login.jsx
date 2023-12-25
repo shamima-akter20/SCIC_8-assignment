@@ -1,5 +1,6 @@
 import Lottie from "lottie-react";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "./Firebase/AuthProvider";
@@ -55,6 +56,9 @@ const Login = () => {
 
   return (
     <div className="mx-2  md:mx-8 lg:mx-16">
+        <Helmet>
+            <title>Log In | SCC Technovision Inc.</title>
+        </Helmet>
         <h1 className="text-3xl md:text-5xl font-bold text-center my-8">Login </h1>
 
      {/* ------------------------------------ */}
