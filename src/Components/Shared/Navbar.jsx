@@ -1,12 +1,28 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Pages.jsx/Login/Firebase/AuthProvider";
 import Logo from "./Logo";
 
 const Navbar = () => {
+   const {user, logOut} = useContext(AuthContext);
+
+   const handleLogOut = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error));
+   }
+
+
   const navLink = (
     <>
-      <div className="flex lg:flex-row flex-col lg:py-0 gap-6 text-sm md:text-lg font-bold list-none ">
+      <div className="flex lg:flex-row items-center flex-col lg:py-0 gap-3 lg:gap-6 text-sm md:text-lg font-bold list-none ">
         <Link className="hover:text-gray-500" to='/'>Home</Link>
-        <Link className="hover:text-gray-500" to='/login'>Log in</Link>
+        {
+          user ?
+          <><button onClick={handleLogOut} className=" hover:text-gray-500">Log Out</button></> 
+          : 
+          <><Link className=" hover:text-gray-500" to='/login'>Log in</Link></>
+        }
         <Link className="hover:text-gray-500" to='/dashboard'>Dashboard</Link>
       </div>
     </>
